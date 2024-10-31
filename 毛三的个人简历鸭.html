@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>毛三的个人简历</title>
+	</head>
+	<style>
+	        * {
+	            margin: 0;
+	            padding: 0;
+	        }
+	
+	        body{
+	            padding: 100px 6%;
+	            background-image:url(https://img.zcool.cn/community/0123ca6038cf2411013ef90ff04eaf.jpg@2o.jpg);
+				background-repeat: no-repeat;
+				background-size:100% 100%;
+	        }
+	
+	        .container {
+	            display: flex;
+				background-color: rgba(21, 40, 72, 0.1);
+	        }
+	
+	        .profile {
+	            padding: 20px 30px;
+	            height: 230px;
+	            text-align: center;
+	            flex: 1 1 400px;
+	            position: sticky;
+	            top: 20px;
+	            border-right: 2px solid #333333;
+	        }
+	
+	        .profile h3 {
+	            font-size: 20px;
+				color: white;
+	        }
+	
+	        .profile p {
+	            color: white;
+	            margin-bottom: 16px;
+	            font-size: 15px;
+	        }
+			.profile img {
+				width: 150px;
+				height: 150px;
+			}
+	
+	        .btn {
+	            padding: 7px 20px;
+	            border-radius: 5px;
+	            background: greenyellow;
+	            color: #FFFFFF;
+	            font-size: 17px;
+	            text-decoration: none;
+	        }
+	
+	        .btn:hover {
+	            background: forestgreen;
+	        }
+	
+	        .information {
+	            padding: 20px 30px;
+	            flex: 1 1 1000px;
+	            background: rgba(45, 101, 159, 0.1); 
+	        }
+	
+	        .title {
+	            font-size: 25px;
+	            color: #adff2f;
+	            margin-bottom: 15px;
+	        }
+	
+	        .about p {
+	            font-size: 17px;
+	            line-height: 2;
+	            padding-bottom: 10px;
+	            color: white;
+	        }
+	
+	        .about .box-container {
+	            display: flex;
+	            flex-wrap: wrap;
+	        }
+	
+	        .about .box-container .box {
+	            flex: 1 1 250px;
+	        }
+	
+	        .about .box-container .box h3 {
+	            font-size: 15px;
+	            padding: 10px 0;
+	            color: white;
+	        }
+	
+	        .about .box-container .box h3 span {
+	            color: #228b22;
+	        }
+	
+	        .services {
+	            padding: 20px 0;
+	        }
+	
+	        .imgbox-container {
+	            display: flex;
+	        }
+	
+	        .imgbox-container .box {
+	            flex: 1 1 17px;
+	            text-align: center;
+	            border-radius: 5px;
+	            padding: 20px;
+	            background: #162949;
+	            margin-right: 12px;
+	        }
+	
+	        .imgbox-container .box img {
+	            height: 50px;
+	            margin-bottom: 10px;
+	        }
+	
+	        .imgbox-container .box h3 {
+	            font-size: 15px;
+	            color: deeppink;
+	        }
+	
+	        .skills .box-container {
+	            display: flex;
+	            flex-wrap: wrap;
+	        }
+	
+	        .skills .box-container .box {
+	            flex: 1 1 300px;
+	        }
+	
+	        .skills .box-container .box:last-child {
+	            margin-left: 12px;
+	        }
+	
+	        .progress h3 {
+	            padding: 10px 0;
+	            display: flex;
+	            justify-content: space-between;
+	            color: #333333;
+	            font-size: 15px;
+	        }
+	
+	        .progress h3 span {
+	            color: #777777;
+	        }
+	
+	        .bar {
+	            overflow: hidden;
+	            border-radius: 50px;
+	            height: 10px;
+	            background: #eeeeee;
+	        }
+	
+	        .bar span {
+	            background: #228b22;
+	            height: 100%;
+	            display: block;
+	            border-radius: 50px;
+	        }
+	
+	        .first {
+	            width: 95%;
+	        }
+	
+	        .second {
+	            width: 80%;
+	        }
+	
+	        .third {
+	            width: 65%;
+	        }
+	
+	        .fourth {
+	            width: 70%;
+	        }
+	
+	        .fifth {
+	            width: 90%;
+	        }
+	
+	        .sixth {
+	            width: 75%;
+	        }
+	
+	        .experience {
+	            margin: 20px 0;
+	        }
+	
+	        .experience .box-container {
+	            display: flex;
+	            flex-wrap: wrap;
+	        }
+	
+	        .experience .box-container .box {
+	            padding: 20px;
+	            border-radius: 5px;
+	            flex: 1 1 350px;
+	            background: #eeeeee;
+	        }
+	
+	        .experience .box-container .box span {
+	            color: #2980b9;
+	            font-size: 15px;
+	        }
+	
+	        .experience .box-container .box h3 {
+	            color: white;
+	            font-size: 17px;
+	            padding: 5px 0;
+	        }
+	
+	        .experience .box-container .box p {
+	            color: #FF1493;
+	            line-height: 2;
+	            font-size: 13px;
+	        }
+	
+	        .contact .box-container {
+	            display: flex;
+	            flex-wrap: wrap;
+	        }
+	
+	        .contact .box-container .box {
+	            flex: 1 1 200px;
+	            display: flex;
+	        }
+	
+	        .contact .box-container .box i {
+	            height: 40px;
+	            width: 40px;
+	            line-height: 40px;
+	            font-size: 15px;
+	            border-radius: 50%;
+	            background: #adff2f;
+	            color: #FFFFFF;
+	            text-align: center;
+	            margin-top: 14px;
+	        }
+	
+	        .contact .box-container .box h3 {
+	            font-size: 17px;
+	            color: ghostwhite;
+	            padding-bottom: 5px;
+	        }
+	
+	        .contact .box-container .box p {
+	            font-size: 14px;
+	            color: white;
+	            line-height: 2;
+	        }
+	
+	        .info {
+	            padding-left: 10px;
+	        }
+			#peach {
+				background-color: #367894;
+			}
+	    </style>
+	<body>
+		<!-- 这是一个大大的容器 -->
+		<div class="container">
+			
+			
+			<!-- 左边的大盒子 -->
+			<div class="profile">
+				<img src="cute.jpg" alt="毛三的头像">
+				<h3>陈峻屹</h3>
+				<p>后端开发</p>
+				<!-- 按钮盒子 -->
+				<div class="button">
+					<a href="https://ys.mihoyo.com/cloud/#/" target="_blank" class="btn">下载简历</a>
+					<a href="javascript:alert('发送成功')" class="btn">发送面试邀请</a>
+				</div>
+			</div>
+			
+			
+			<!-- 右边的大盒子 -->
+			<div class="information">
+				<div class="about">
+					<h3 class="title">About Me</h3>
+					<p>我叫陈峻屹,代号毛三,擅长python,go语言集成开发,SQL数据分析等领域(瞎扯的)</p>
+					<p>除了后端,我还会熟悉的使用前端语言制作网站</p>
+					<div class="box-container">
+					                    <div class="box">
+					                        <h3><span>年龄 : </span>18</h3>
+					                        <h3><span>地址 : </span>提瓦特</h3>
+					                        <h3><span>电话 : </span>19743035390</h3>
+					                        <h3><span>邮箱 : </span>2921323707@qq.com</h3>
+					                    </div>
+					                    <div class="box">
+					                        <h3><span>求职 : </span>go语言云服务开发</h3>
+					                        <h3><span>语言 : </span>汉语,英语</h3>
+					                        <h3><span>工龄 : </span>0 年</h3>
+					                        <h3><span>现状 : </span>学习阶段</h3>
+					                    </div>
+					                </div>
+				</div>
+				<div class="services">
+					<h3 class="title">My Services</h3>
+					<div class="imgbox-container">
+						<!-- logo都是直接查的 -->
+					                    <div class="box">
+					                        <img src="http://nocturne.bczcdn.com/file/1645598211806_42022/icon-1.png" alt="HTML">
+					                        <h3>HTML 5</h3>
+					                    </div>
+					                    <div class="box">
+					                        <img src="http://nocturne.bczcdn.com/file/1645598216656_89057/icon-2.png" alt="CSS">
+					                        <h3>CSS 3</h3>
+					                    </div>
+					                    <div class="box">
+					                        <img src="http://nocturne.bczcdn.com/file/1645598219832_4197/icon-3.png" alt="JS">
+					                        <h3>JavaScript</h3>
+					                    </div>
+					                    <div class="box">
+					                        <img src="http://nocturne.bczcdn.com/file/1645598223509_63268/icon-4.png" alt="Python">
+					                        <h3>Python</h3>
+					                    </div>
+					                    <div class="box">
+					                        <img src="http://nocturne.bczcdn.com/file/1645598226940_86454/icon-5.png" alt="SQL">
+					                        <h3>SQL</h3>
+					                    </div>
+					                    <div class="box">
+					                        <img src="http://nocturne.bczcdn.com/file/1645598230253_49248/icon-6.png" alt="C++">
+					                        <h3>C++</h3>
+					                    </div>
+					                </div>
+				</div>
+				<div class="skills">
+					<h3 class="title">My Skills</h3>
+					<div class="box-container">
+					                    <div class="box">
+					                        <div class="progress">
+					                            <h3>Html <span>95%</span></h3>
+					                            <div class="bar"><span class="first"></span></div>
+					                        </div>
+					                        <div class="progress">
+					                            <h3>Css <span>80%</span></h3>
+					                            <div class="bar"><span class="second"></span></div>
+					                        </div>
+					                        <div class="progress">
+					                            <h3>Javascript <span>65%</span></h3>
+					                            <div class="bar"><span class="third"></span></div>
+					                        </div>
+					                        <div class="progress">
+					                            <h3>Photoshop <span>70%</span></h3>
+					                            <div class="bar"><span class="fourth"></span></div>
+					                        </div>
+					                    </div>
+					                    <div class="box">
+					                        <div class="progress">
+					                            <h3>Web Design <span>90%</span></h3>
+					                            <div class="bar"><span class="fifth"></span></div>
+					                        </div>
+					                        <div class="progress">
+					                            <h3>Graphic Design <span>75%</span></h3>
+					                            <div class="bar"><span class="sixth"></span></div>
+					                        </div>
+					                        <div class="progress">
+					                            <h3>App Design <span>65%</span></h3>
+					                            <div class="bar"><span class="third"></span></div>
+					                        </div>
+					                        <div class="progress">
+					                            <h3>Digital Marketing <span>70%</span></h3>
+					                            <div class="bar"><span class="fourth"></span></div>
+					                        </div>
+					                    </div>
+					                </div>
+				</div>
+				<div class="experience">
+					<h3 class="title">My Experience</h3>
+					<div class="box-container">
+					                    <div class="box" id="peach">
+					                        <span>2024-unknown</span>
+					                        <h3>后端方向相关职业</h3>
+					                        <p>待定</p>
+					                        <p></p>
+					                    </div>
+					                </div>
+				</div>
+				<div class="contact">
+					<h3 class="title">Contact Info(毛三的联系方式)</h3>
+					<div class="box-container">
+					                    <div class="box">
+					                        <i class="fas fa-map"></i>
+					                        <div class="info">
+					                            <h3>微信</h3>
+					                            <p>zsno060901</p>
+					                        </div>
+					                    </div>
+					                    <div class="box">
+					                        <i class="fas fa-phone"></i>
+					                        <div class="info">
+					                            <h3>My Number</h3>
+					                            <p>19743035390</p>
+					                        </div>
+					                    </div>
+					                    <div class="box">
+					                        <i class="fas fa-envelope"></i>
+					                        <div class="info">
+					                            <h3>My Email</h3>
+					                            <p>2921323707@qq.com</p>
+					                        </div>
+					                    </div>
+					                </div>
+				</div>
+				
+				
+			</div>
+			
+			
+			
+		</div>
+		
+		
+		
+		
+	</body>
+</html>
